@@ -13,9 +13,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
-import gov.bnr.licensing_compliance_service.auth.User;
+import gov.bnr.licensing_compliance_service.auth.entity.User;
 import gov.bnr.licensing_compliance_service.workflow.Application;
 import lombok.Getter;
 import lombok.Setter;
