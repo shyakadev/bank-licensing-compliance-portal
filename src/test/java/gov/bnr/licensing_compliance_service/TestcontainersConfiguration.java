@@ -6,6 +6,8 @@ import org.springframework.context.annotation.Bean;
 import org.testcontainers.postgresql.PostgreSQLContainer;
 import org.testcontainers.utility.DockerImageName;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 @TestConfiguration(proxyBeanMethods = false)
 class TestcontainersConfiguration {
 
@@ -16,6 +18,11 @@ class TestcontainersConfiguration {
         return new PostgreSQLContainer(DockerImageName.parse("postgres:16-alpine")).withDatabaseName("licensing_service")
             .withUsername("postgres")
             .withPassword("postgres");
+    }
+
+    @Bean
+    ObjectMapper objectMapper() {
+        return new ObjectMapper();
     }
 
 }
