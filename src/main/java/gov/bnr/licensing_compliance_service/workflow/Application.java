@@ -18,7 +18,7 @@ import jakarta.persistence.Version;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import gov.bnr.licensing_compliance_service.auth.User;
+import gov.bnr.licensing_compliance_service.auth.entity.User;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -51,11 +51,8 @@ public class Application {
     @Column(nullable = false, columnDefinition = "application_status")
     private ApplicationStatus status = ApplicationStatus.PENDING;
 
-    @Column(name = "decision_reason", columnDefinition = "TEXT")
-    private String decisionReason;
-
-    @Column(name = "resubmission_reason", columnDefinition = "TEXT")
-    private String resubmissionReason;
+    @Column(name = "reason", columnDefinition = "TEXT")
+    private String reason;
 
     @Version
     @Column(nullable = false)

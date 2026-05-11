@@ -12,7 +12,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
-import gov.bnr.licensing_compliance_service.auth.User;
+import gov.bnr.licensing_compliance_service.auth.entity.User;
 import lombok.Getter;
 import lombok.Setter;
 
