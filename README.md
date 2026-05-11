@@ -79,6 +79,33 @@ $env:JWT_REFRESH_TOKEN_EXPIRATION="604800000"
 Flyway runs automatically on startup schema is created and seed data is loaded. 
 No manual database setup required.
 
+---
+
+## Seeded Users
+
+| Role      | Username  | Password | Name            | Email               | Type      | Title      |
+|-----------|-----------|----------|-----------------|---------------------|-----------|------------|
+| Admin     | admin     | password | John Doe        | d.john@bnr.rw       | Staff     | IT Admin   |
+| Reviewer  | reviewer  | password | Eric Marc       | m.eric@bnr.rw       | Staff     | Analyst    |
+| Approver  | approver  | password | Rebecca Brenda  | b.rebecca@bnr.rw    | Staff     | Sr Analyst |
+| Applicant | applicant | password | Mary Grace      | g.mary@bnr.rw       | Applicant | CFO        |
+
+> **Note:** Change all credentials before deploying to any shared environment.
+ 
+---
+
+## Seeded Applications
+
+| ID | Status | Notes |
+|----|--------|-------|
+| 1 | PENDING | Available for reviewer to claim |
+| 2 | UNDER_REVIEW | Assigned to seeded reviewer |
+| 3 | REVIEWED | Assigned to seeded approver, ready for decision |
+| 4 | AWAITING_RESUBMISSION | Resubmission reason populated, document uploaded |
+ 
+---
+
+
 **Docker must be running.** Integration tests spin up a real PostgreSQL container via Testcontainers. Tests will fail if Docker is not available.
 
 
